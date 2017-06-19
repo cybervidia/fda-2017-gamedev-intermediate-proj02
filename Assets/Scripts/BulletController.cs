@@ -10,7 +10,8 @@ public class BulletController : MonoBehaviour {
 	void Update () {
 		// Ad ogni update sposto il proiettile verso l'alto (asse z)
 		// basandomi sul deltaTime
-		transform.Translate(0, 0, speed * Time.deltaTime);	
+		float x = Random.Range(-20,20);
+		transform.Translate(x * Time.deltaTime, 0, speed * Time.deltaTime);	
 	}
 
 	// Quando il renderer dell'oggetto esce dalla vista della
